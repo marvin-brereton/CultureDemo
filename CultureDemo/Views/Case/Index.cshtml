@@ -3,6 +3,10 @@
 <div class="container">
 
     <h1>Case List</h1>
+    <hr />
+    @Html.ActionLink("Make a Case", "CreateCase", "Case", null, new { @class="btn btn-primary" })
+    <br />
+    <hr />
 
     <table class="table table-striped">
         <tr>
@@ -17,7 +21,7 @@
         @foreach (var item in Model.CaseList)
         {
             <tr>
-                <td>@Html.ActionLink(item.Case_Name, "Details", "Case", new { cName = item.Case_Name, cDesc = item.Case_Description, cStatus = item.Case_Status, cDateT = item.Case_CreatedDateT, mDateT = item.Case_ModifiedDateT, cBy = item.User_CreatedBy, mBy = item.User_ModifiedBy  }, null)</td>
+                <td>@Html.ActionLink(item.Case_Name, "DetailsFromList", "Case", new { cName = item.Case_Name, cDesc = item.Case_Description, cStatus = item.Case_Status, cDateT = item.Case_CreatedDateT, mDateT = item.Case_ModifiedDateT, cBy = item.User_CreatedBy, mBy = item.User_ModifiedBy  }, null)</td>
                 <td>@Html.DisplayFor(e => item.Case_Description)</td>
                 <td>@Html.DisplayFor(e => item.Case_Status)</td>
                 <td>@Html.DisplayFor(e => item.Case_CreatedDateT)</td>

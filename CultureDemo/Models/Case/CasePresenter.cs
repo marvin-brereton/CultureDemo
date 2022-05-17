@@ -16,8 +16,7 @@
                     Case_Status = StatusGenerator(),
                     Case_CreatedDateT = DateTGenerator(),
                     Case_ModifiedDateT = DateTGenerator(),
-                    User_FirstName = Faker.Name.First(),
-                    User_LastName = Faker.Name.Last(),
+                    User_CreatedBy = Faker.Name.FullName(),
                     User_ModifiedBy = Faker.Name.FullName()
                 });
             }
@@ -61,17 +60,32 @@
                 _ => "Active",
             };
         }
-        public string FirstNameGenerator()
-        {
-            return Faker.Name.First();
-        }
-        public string LastNameGenerator()
-        {
-            return Faker.Name.Last();
-        }
         public string FullNameGenerator()
         {
             return Faker.Name.FullName();
+        }
+
+        public bool IsCaseValid(CaseBO toCheck)
+        {
+            return  HasValue(toCheck.Case_Name) && 
+                    HasValue(toCheck.Case_Description) && 
+                    HasValue(toCheck.User_FirstName) && 
+                    HasValue(toCheck.User_LastName) || 
+                    HasValue(toCheck.User_CreatedBy);
+        }
+
+        public bool HasValue(string toCheck)
+        {
+            return !string.IsNullOrWhiteSpace(toCheck);
+        }
+
+        public CaseBO PopulateCreateDummyData(CaseBO caseDetails)
+        {
+            caseDetails.Case_Status = "New";
+            caseDetails.Case_CreatedDateT = DateTime.Now.ToShortDateString();
+            caseDetails.User_CreatedBy = $"{caseDetails.User_FirstName} {caseDetails.User_LastName}";
+
+            return caseDetails;
         }
     }
 }
