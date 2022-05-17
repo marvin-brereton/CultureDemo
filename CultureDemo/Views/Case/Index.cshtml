@@ -1,8 +1,13 @@
 ﻿@model CultureDemo.Models.Case.CaseDTO
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@{
+
+}
 
 <div class="container">
 
     <h1>Case List</h1>
+    <h3>@localizer["WelcomeMessage"]</h3>
     <hr />
     @Html.ActionLink("Make a Case", "CreateCase", "Case", null, new { @class="btn btn-primary" })
     <br />
