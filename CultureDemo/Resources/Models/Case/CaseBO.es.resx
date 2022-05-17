@@ -123,11 +123,17 @@
   <data name="CaseDescription" xml:space="preserve">
     <value>Descripción del caso</value>
   </data>
+  <data name="CaseDescriptionRequired" xml:space="preserve">
+    <value>Se requiere descripción del caso</value>
+  </data>
   <data name="CaseModifiedDateT" xml:space="preserve">
     <value>Caso modificado</value>
   </data>
   <data name="CaseName" xml:space="preserve">
     <value>Nombre del caso</value>
+  </data>
+  <data name="CaseNameRequired" xml:space="preserve">
+    <value>El nombre del caso es obligatorio</value>
   </data>
   <data name="CaseStatus" xml:space="preserve">
     <value>Estado del caso</value>
@@ -138,10 +144,16 @@
   <data name="FirstName" xml:space="preserve">
     <value>Primer nombre</value>
   </data>
+  <data name="FirstNameRequired" xml:space="preserve">
+    <value>Se requiere primer nombre</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Segundo nombre</value>
+  </data>
+  <data name="LastNameRequired" xml:space="preserve">
+    <value>Se requiere segundo nombre</value>
+  </data>
   <data name="ModifiedBy" xml:space="preserve">
     <value>Modificado por</value>
-  </data>
-  <data name="SecondName" xml:space="preserve">
-    <value>Segundo nombre</value>
   </data>
 </root>

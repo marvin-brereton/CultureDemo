@@ -8,8 +8,8 @@ namespace CultureDemo.Models.User
         [Display(Name = "FirstName")]
         public string User_FirstName { get; set; } = "";
 
-        [Display(Name = "SecondName")]
-        [Required(ErrorMessage = "SecondNameRequired")]
+        [Display(Name = "LastName")]
+        [Required(ErrorMessage = "LastNameRequired")]
         public string User_LastName { get; set; } = "";
 
         [Display(Name = "CreatedBy")]
