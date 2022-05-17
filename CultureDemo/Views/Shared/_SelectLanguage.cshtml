@@ -7,7 +7,7 @@
 @{
     var requestCulture = Context.Features.Get<IRequestCultureFeature>();
     var cultureItems = LocOptions.Value.SupportedUICultures
-        .Select(c => new SelectListItem { Value = c.Name, Text = c.Name })
+        .Select(c => new SelectListItem { Value = c.Name, Text = Localizer.GetString(c.Name) })
         .ToList();
     var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}{Context.Request.QueryString}";
 }
@@ -19,7 +19,7 @@
           method="post" 
           class="form-horizontal nav-link text-dark" 
           role="form">
-        <span>Select Language: </span>
+        <span>@Localizer["SelectLanguage"] </span>
         <select name="culture" 
                 onchange="this.form.submit();" 
                 asp-for="@requestCulture.RequestCulture.UICulture.Name" 

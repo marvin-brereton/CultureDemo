@@ -1,20 +1,25 @@
 ﻿using CultureDemo.Models.Case;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 
 namespace CultureDemo.Controllers
 {
     public class CaseController : Controller
     {
         CasePresenter _casePresenter;
+        private readonly IStringLocalizer<CaseController> _localizer;
 
-        public CaseController()
+        public CaseController(IStringLocalizer<CaseController> localizer)
         {
             _casePresenter = new CasePresenter();
+            _localizer = localizer;
         }
 
         public IActionResult Index()
         {
             var caseDetails = new CaseDTO();
+
+            caseDetails.WelcomeMessage = _localizer["WelcomeMessage"];
 
             caseDetails.CaseList = _casePresenter.GeneratedCaseList()
                 .OrderBy(e => e.Case_CreatedDateT)

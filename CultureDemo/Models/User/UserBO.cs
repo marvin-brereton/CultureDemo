@@ -12,10 +12,10 @@ namespace CultureDemo.Models.User
         [Required(ErrorMessage = "SecondNameRequired")]
         public string User_LastName { get; set; } = "";
 
-        [Display(Name = "CaseCreatedBy")]
+        [Display(Name = "CreatedBy")]
         public string User_CreatedBy { get; set; } = "";
 
-        [Display(Name = "CaseModifiedBy")]
+        [Display(Name = "ModifiedBy")]
         public string User_ModifiedBy { get; set; } = "";
     }
 }

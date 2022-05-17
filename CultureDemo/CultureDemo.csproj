@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Resources\Controllers\Case\" />
     <Folder Include="Views\Case\" />
   </ItemGroup>
 

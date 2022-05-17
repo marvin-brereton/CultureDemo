@@ -117,7 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="WelcomeMessage" xml:space="preserve">
-    <value>¡Bienvenido a la lista de casos! A continuación se muestra una lista de TODOS los casos (los casos se aleatorizan en la carga)</value>
+  <data name="CaseCreatedDateT" xml:space="preserve">
+    <value>Caso creado</value>
+  </data>
+  <data name="CaseDescription" xml:space="preserve">
+    <value>Descripción del caso</value>
+  </data>
+  <data name="CaseModifiedDateT" xml:space="preserve">
+    <value>Caso modificado</value>
+  </data>
+  <data name="CaseName" xml:space="preserve">
+    <value>Nombre del caso</value>
+  </data>
+  <data name="CaseStatus" xml:space="preserve">
+    <value>Estado del caso</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Creado por</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Primer nombre</value>
+  </data>
+  <data name="ModifiedBy" xml:space="preserve">
+    <value>Modificado por</value>
+  </data>
+  <data name="SecondName" xml:space="preserve">
+    <value>Segundo nombre</value>
   </data>
 </root>

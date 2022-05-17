@@ -117,7 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="WelcomeMessage" xml:space="preserve">
-    <value>Welcome to the case list! Below is a list of ALL cases (Cases are randomized on load)</value>
+  <data name="CaseList" xml:space="preserve">
+    <value>Case list</value>
+  </data>
+  <data name="CreateCase" xml:space="preserve">
+    <value>Create Case</value>
   </data>
 </root>
