@@ -5,13 +5,18 @@ namespace CultureDemo.Controllers
 {
     public class CaseController : Controller
     {
+        CasePresenter _casePresenter;
+
+        public CaseController()
+        {
+            _casePresenter = new CasePresenter();
+        }
+
         public IActionResult Index()
         {
             var caseDetails = new CaseDTO();
 
-            var casePresenter = new CasePresenter();
-
-            caseDetails.CaseList = casePresenter.GeneratedCaseList()
+            caseDetails.CaseList = _casePresenter.GeneratedCaseList()
                 .OrderBy(e => e.Case_CreatedDateT)
                 .ToList();
 
@@ -21,18 +26,27 @@ namespace CultureDemo.Controllers
         [HttpGet]
         public IActionResult CreateCase()
         {
-            return View(new CaseDTO());
+            return View(new CaseBO());
         }
 
         [HttpPost]
         public IActionResult CreateCase(CaseBO caseDetails)
         {
-            return View(caseDetails);
+            if (ModelState.IsValid && _casePresenter.IsCaseValid(caseDetails))
+            {
+                caseDetails = _casePresenter.PopulateCreateDummyData(caseDetails);
+
+                return RedirectToAction(nameof(Details), caseDetails);
+            }
+            else
+            {
+                return View(caseDetails);
+            }
         }
 
-        public IActionResult Details(string cName, string cDesc, string cStatus, string cDateT, string mDateT, string cBy, string mBy)
+        public IActionResult DetailsFromList(string cName, string cDesc, string cStatus, string cDateT, string mDateT, string cBy, string mBy)
         {
-            var caseBO = new CaseBO
+            var caseDetails = new CaseBO
             {
                 Case_Name = cName,
                 Case_Description = cDesc,
@@ -43,7 +57,19 @@ namespace CultureDemo.Controllers
                 User_ModifiedBy = mBy
             };
 
-            return View(caseBO);
+            if (_casePresenter.IsCaseValid(caseDetails))
+            {
+                return RedirectToAction(nameof(Details), caseDetails);
+            }
+            else
+            {
+                return RedirectToAction(nameof(Index));
+            }
+        }
+
+        public IActionResult Details(CaseBO caseDetails)
+        {
+            return View(caseDetails);
         }
     }
 }
