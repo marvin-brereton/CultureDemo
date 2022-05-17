@@ -1,7 +1,27 @@
+using Microsoft.Extensions.Options;
+using System.Globalization;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+    var cultures = new List<CultureInfo> {
+        new CultureInfo("en"),
+        new CultureInfo("es")
+    };
+    options.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("en");
+    options.SupportedCultures = cultures;
+    options.SupportedUICultures = cultures;
+});
+
+
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+builder.Services.AddMvc()
+    .AddViewLocalization(Microsoft.AspNetCore.Mvc.Razor.LanguageViewLocationExpanderFormat.Suffix)
+    .AddDataAnnotationsLocalization();
 
 var app = builder.Build();
 
@@ -17,6 +37,18 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+//var cultures = new List<CultureInfo> {
+//    new CultureInfo("en"),
+//    new CultureInfo("es")
+//};
+//app.UseRequestLocalization(options => {
+//    options.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("en");
+//    options.SupportedCultures = cultures;
+//    options.SupportedUICultures = cultures;
+//});
+
+app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 
 app.UseAuthorization();
 

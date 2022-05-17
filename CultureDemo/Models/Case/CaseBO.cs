@@ -19,7 +19,7 @@ namespace CultureDemo.Models.Case
         [Display(Name = "CaseCreatedDateT")]
         public string Case_CreatedDateT { get; set; } = "";
 
-        [Display(Name = "CaseLastModifiedDateT")]
+        [Display(Name = "CaseModifiedDateT")]
         public string Case_ModifiedDateT { get; set; } = "";
     }
 }

@@ -1,40 +1,41 @@
 ﻿@model CultureDemo.Models.Case.CaseBO
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 
 @{
     ViewData["Title"] = "Create Case";
 }
 
 <div class="container">
-    <h1>Create Case:</h1>
+    <h1>@localizer["CreateCaseTitle"]</h1>
     @using (Html.BeginForm("CreateCase", "Case", FormMethod.Post))
     {
         <div class="row mb-3">
             <div class="col">
                 @Html.LabelFor(e => e.Case_Name)
-                @Html.TextBoxFor(e => e.Case_Name, null, new { @placeholder = "Enter case name", @class = "form-control" })
+                @Html.TextBoxFor(e => e.Case_Name, null, new { @placeholder = $"{localizer["EnterCaseName"].Value.ToString()}", @class = "form-control" })
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
                 @Html.LabelFor(e => e.Case_Description)
-                @Html.TextAreaFor(e => e.Case_Description, 5, 10, new { @placeholder = "Enter case description", @class = "form-control" })
+                @Html.TextAreaFor(e => e.Case_Description, 5, 10, new { @placeholder = $"{localizer["EnterCaseDescription"].Value.ToString()}", @class = "form-control" })
             </div>
         </div>
         <div class="row mb-3">
             <div class="col-6">
                 @Html.LabelFor(e => e.User_FirstName)
-                @Html.TextBoxFor(e => e.User_FirstName, null, new { @placeholder = "Enter your first name", @class = "form-control" })
+                @Html.TextBoxFor(e => e.User_FirstName, null, new { @placeholder = $"{localizer["EnterFirstName"].Value.ToString()}", @class = "form-control" })
             </div>
             <div class="col-6">
                 @Html.LabelFor(e => e.User_LastName)
-                @Html.TextBoxFor(e => e.User_LastName, null, new { @placeholder = "Enter your last name", @class = "form-control" })
+                @Html.TextBoxFor(e => e.User_LastName, null, new { @placeholder = $"{localizer["EnterLastName"].Value.ToString()}", @class = "form-control" })
             </div>
         </div>
         <div class="row mb-3">
             @Html.ValidationSummary()
         </div>
-        <input type="submit" value="Submit" class="btn btn-primary mt-2" />
-        @Html.ActionLink("Cancel", "Index", "Case", null, new { @class="btn btn-danger mt-2" })
+        <input type="submit" value=@localizer["Submit"].Value.ToString() class="btn btn-primary mt-2">
+        @Html.ActionLink(localizer["Cancel"].Value.ToString(), "Index", "Case", null, new { @class="btn btn-danger mt-2" })
     }
 </div>
 
