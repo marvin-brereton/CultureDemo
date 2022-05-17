@@ -1,0 +1,39 @@
+﻿@model CultureDemo.Models.Case.CaseDTO
+@{
+    ViewData["Title"] = "Create Case";
+}
+
+<div class="container">
+    <h1>Create Case:</h1>
+    @using (Html.BeginForm("CreateCase", "Case", FormMethod.Post))
+    {
+        <div class="row mb-3">
+            <div class="col">
+                @Html.LabelFor(e => e.Case.Case_Name)
+                @Html.TextBoxFor(e => e.Case.Case_Name, null, new { @placeholder = "Enter case name", @class = "form-control" })
+                @Html.ValidationMessageFor(e => e.Case.Case_Name)
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                @Html.LabelFor(e => e.Case.Case_Description)
+                @Html.TextAreaFor(e => e.Case.Case_Description, 5, 10, new { @placeholder = "Enter case description", @class = "form-control" })
+                @Html.ValidationMessageFor(e => e.Case.Case_Description)
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-6">
+                @Html.LabelFor(e => e.Case.User_FirstName)
+                @Html.TextBoxFor(e => e.Case.User_FirstName, null, new { @placeholder = "Enter your first name", @class = "form-control" })
+                @Html.ValidationMessageFor(e => e.Case.User_FirstName)
+            </div>
+            <div class="col-6">
+                @Html.LabelFor(e => e.Case.User_LastName)
+                @Html.TextBoxFor(e => e.Case.User_LastName, null, new { @placeholder = "Enter your last name", @class = "form-control" })
+                @Html.ValidationMessageFor(e => e.Case.User_LastName)
+            </div>
+        </div>
+        <input type="submit" value="submit" class="btn btn-primary mt-2" />
+    }
+</div>
+

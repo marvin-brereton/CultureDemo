@@ -1,0 +1,46 @@
+﻿@model CultureDemo.Models.Case.CaseBO
+
+@{
+    ViewData["Title"] = "Case Details";
+}
+
+<div>
+
+    <h1>Case Details</h1>
+
+    <table>
+        <tr>
+            <th>@Html.LabelFor(e => e.Case_Name)</th>
+            <td>@Html.DisplayFor(e => e.Case_Name)</td>
+        </tr>
+
+        <tr>
+            <th>@Html.LabelFor(e => e.Case_Description)</th>
+            <td>@Html.DisplayFor(e => e.Case_Description)</td>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(e => e.Case_Status)</th>
+            <td>@Html.DisplayFor(e => e.Case_Status)</td>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(e => e.Case_CreatedDateT)</th>
+            <td>@Html.DisplayFor(e => e.Case_CreatedDateT)</td>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(e => e.User_CreatedBy)</th>
+            <td>@Html.DisplayFor(e => e.User_CreatedBy)</td>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(e => e.Case_ModifiedDateT)</th>
+            <td>@Html.DisplayFor(e => e.Case_ModifiedDateT)</td>
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(e => e.User_ModifiedBy)</th>
+            <td>@Html.DisplayFor(e => e.User_ModifiedBy)</td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <a class="btn btn-primary" asp-action="Index">Back to List</a>
+</div>
