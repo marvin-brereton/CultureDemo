@@ -1,0 +1,32 @@
+﻿@model CultureDemo.Models.Case.CaseDTO
+
+<div class="container">
+
+    <h1>Case List</h1>
+
+    <table class="table table-striped">
+        <tr>
+            <th>@Html.LabelFor(e => e.Case.Case_Name)</th>
+            <th>@Html.LabelFor(e => e.Case.Case_Description)</th>
+            <th>@Html.LabelFor(e => e.Case.Case_Status)</th>
+            <th>@Html.LabelFor(e => e.Case.Case_CreatedDateT)</th>
+            <th>@Html.LabelFor(e => e.Case.User_CreatedBy)</th>
+            <th>@Html.LabelFor(e => e.Case.Case_ModifiedDateT)</th>
+            <th>@Html.LabelFor(e => e.Case.User_ModifiedBy)</th>
+        </tr>
+        @foreach (var item in Model.CaseList)
+        {
+            <tr>
+                <td>@Html.ActionLink(item.Case_Name, "Details", "Case", new { cName = item.Case_Name, cDesc = item.Case_Description, cStatus = item.Case_Status, cDateT = item.Case_CreatedDateT, mDateT = item.Case_ModifiedDateT, cBy = item.User_CreatedBy, mBy = item.User_ModifiedBy  }, null)</td>
+                <td>@Html.DisplayFor(e => item.Case_Description)</td>
+                <td>@Html.DisplayFor(e => item.Case_Status)</td>
+                <td>@Html.DisplayFor(e => item.Case_CreatedDateT)</td>
+                <td>@Html.DisplayFor(e => item.User_CreatedBy)</td>
+                <td>@Html.DisplayFor(e => item.Case_ModifiedDateT)</td>
+                <td>@Html.DisplayFor(e => item.User_ModifiedBy)</td>
+            </tr>
+            <tr></tr>
+        }
+    </table>
+</div>
+
