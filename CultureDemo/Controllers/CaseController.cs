@@ -1,6 +1,9 @@
 ﻿using CultureDemo.Models.Case;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
+using System.Globalization;
+using System.Reflection;
+using System.Resources;
 
 namespace CultureDemo.Controllers
 {
@@ -8,6 +11,7 @@ namespace CultureDemo.Controllers
     {
         CasePresenter _casePresenter;
         private readonly IStringLocalizer<CaseController> _localizer;
+        ResourceManager resourceManager;
 
         public CaseController(IStringLocalizer<CaseController> localizer)
         {
