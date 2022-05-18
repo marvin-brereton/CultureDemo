@@ -1,13 +1,11 @@
 ﻿@model CultureDemo.Models.Case.CaseDTO
-@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
-@{
-}
+@using CultureDemo.Languages
 
 <div class="container">
 
     <h1>@Model.WelcomeMessage</h1>
     <hr />
-    @Html.ActionLink($"{localizer["CreateCase"].Value.ToString()}", "CreateCase", "Case", null, new { @class="btn btn-primary" })
+    @Html.ActionLink($"{@Resources.CreateCase}", "Create", "Case", null, new { @class="btn btn-primary" })
     <br />
     <hr />
 
