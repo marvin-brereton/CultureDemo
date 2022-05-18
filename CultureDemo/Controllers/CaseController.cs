@@ -1,9 +1,7 @@
 ﻿using CultureDemo.Models.Case;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
-using System.Globalization;
-using System.Reflection;
-using System.Resources;
+using CultureDemo.Languages;
 
 namespace CultureDemo.Controllers
 {
@@ -11,7 +9,6 @@ namespace CultureDemo.Controllers
     {
         CasePresenter _casePresenter;
         private readonly IStringLocalizer<CaseController> _localizer;
-        ResourceManager resourceManager;
 
         public CaseController(IStringLocalizer<CaseController> localizer)
         {
@@ -21,25 +18,27 @@ namespace CultureDemo.Controllers
 
         public IActionResult Index()
         {
-            var caseDetails = new CaseDTO();
+            var caseDetails = new CaseDTO
+            {
+                // DEMO: 1
+                WelcomeMessage = Resources.WelcomeMessage,
 
-            caseDetails.WelcomeMessage = _localizer["WelcomeMessage"];
-
-            caseDetails.CaseList = _casePresenter.GeneratedCaseList()
+                CaseList = _casePresenter.GeneratedCaseList()
                 .OrderBy(e => e.Case_CreatedDateT)
-                .ToList();
+                .ToList()
+            };
 
             return View(caseDetails);
         }
 
         [HttpGet]
-        public IActionResult CreateCase()
+        public IActionResult Create()
         {
             return View(new CaseBO());
         }
 
         [HttpPost]
-        public IActionResult CreateCase(CaseBO caseDetails)
+        public IActionResult Create(CaseBO caseDetails)
         {
             if (ModelState.IsValid && _casePresenter.IsCaseValid(caseDetails))
             {

@@ -7,74 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="resources\Controllers\Case\**" />
-    <EmbeddedResource Remove="resources\Controllers\Case\**" />
-    <None Remove="resources\Controllers\Case\**" />
+    <Compile Update="Resources\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="resources\Controllers\CaseController.en.resx">
+    <EmbeddedResource Update="Resources\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>CultureDemo</CustomToolNamespace>
-    </EmbeddedResource>
-    <EmbeddedResource Update="resources\Controllers\CaseController.es.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>CultureDemo</CustomToolNamespace>
-    </EmbeddedResource>
-    <EmbeddedResource Update="resources\Models\Case\CaseBO.en.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>CultureDemo.Languages</CustomToolNamespace>
-    </EmbeddedResource>
-    <EmbeddedResource Update="resources\Models\Case\CaseBO.es.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>CultureDemo.Languages</CustomToolNamespace>
-    </EmbeddedResource>
-    <EmbeddedResource Update="resources\Views\Case\CreateCase.en.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>CultureDemo.Languages</CustomToolNamespace>
-    </EmbeddedResource>
-    <EmbeddedResource Update="resources\Views\Case\CreateCase.es.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>CultureDemo.Languages</CustomToolNamespace>
-    </EmbeddedResource>
-    <EmbeddedResource Update="resources\Views\Case\Details.en.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>CultureDemo.Languages</CustomToolNamespace>
-    </EmbeddedResource>
-    <EmbeddedResource Update="resources\Views\Case\Details.es.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>CultureDemo.Languages</CustomToolNamespace>
-    </EmbeddedResource>
-    <EmbeddedResource Update="resources\Views\Case\Index.en.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>CultureDemo.Languages</CustomToolNamespace>
-    </EmbeddedResource>
-    <EmbeddedResource Update="resources\Views\Case\Index.es.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>CultureDemo.Languages</CustomToolNamespace>
-    </EmbeddedResource>
-    <EmbeddedResource Update="resources\Views\Home\Index.en.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>CultureDemo.Languages</CustomToolNamespace>
-    </EmbeddedResource>
-    <EmbeddedResource Update="resources\Views\Home\Index.es.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>CultureDemo.Languages</CustomToolNamespace>
-    </EmbeddedResource>
-    <EmbeddedResource Update="resources\Views\Shared\_Layout.en.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>CultureDemo.Languages</CustomToolNamespace>
-    </EmbeddedResource>
-    <EmbeddedResource Update="resources\Views\Shared\_Layout.es.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>CultureDemo.Languages</CustomToolNamespace>
-    </EmbeddedResource>
-    <EmbeddedResource Update="resources\Views\Shared\_SelectLanguage.en.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <CustomToolNamespace>CultureDemo.Languages</CustomToolNamespace>
-    </EmbeddedResource>
-    <EmbeddedResource Update="resources\Views\Shared\_SelectLanguage.es.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <CustomToolNamespace>CultureDemo.Languages</CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>
