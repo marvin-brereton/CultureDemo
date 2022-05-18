@@ -65,13 +65,17 @@
             return Faker.Name.FullName();
         }
 
-        public bool IsCaseValid(CaseBO toCheck)
+        public bool IsCaseValid(CaseBO caseDetails)
         {
-            return  HasValue(toCheck.Case_Name) && 
-                    HasValue(toCheck.Case_Description) && 
-                    HasValue(toCheck.User_FirstName) && 
-                    HasValue(toCheck.User_LastName) || 
-                    HasValue(toCheck.User_CreatedBy);
+            string[] stringArray =
+            {
+                caseDetails.Case_Name,
+                caseDetails.Case_Description,
+                caseDetails.User_LastName,
+                caseDetails.User_FirstName,
+            };
+
+            return stringArray != null || stringArray.Length != 0;
         }
 
         public bool HasValue(string toCheck)
