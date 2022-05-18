@@ -5,6 +5,7 @@
 Easy to include other languages (Add resource files to relevant areas)
 
 <h5>Steps to research:</h5>
+
 - Have a seperate class library for language files to allow to be referenced elsewhere
 - <a href="https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager" target="_blank">Resource tool manager</a>
 
