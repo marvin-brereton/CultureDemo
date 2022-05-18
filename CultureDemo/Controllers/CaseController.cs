@@ -18,17 +18,17 @@ namespace CultureDemo.Controllers
 
         public IActionResult Index()
         {
-            var caseDetails = new CaseDTO
+            var caseDto = new CaseDTO
             {
                 // DEMO: 1
-                WelcomeMessage = Resources.WelcomeMessage,
+                WelcomeMessage = Resources.Case_WelcomeMessage_Header,
 
                 CaseList = _casePresenter.GeneratedCaseList()
                 .OrderBy(e => e.Case_CreatedDateT)
                 .ToList()
             };
 
-            return View(caseDetails);
+            return View(caseDto);
         }
 
         [HttpGet]

@@ -61,290 +61,263 @@ namespace CultureDemo.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Back to List.
-        /// </summary>
-        public static string BackToList {
-            get {
-                return ResourceManager.GetString("BackToList", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cancel.
-        /// </summary>
-        public static string Cancel {
-            get {
-                return ResourceManager.GetString("Cancel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Case Created.
-        /// </summary>
-        public static string CaseCreatedDateT {
-            get {
-                return ResourceManager.GetString("CaseCreatedDateT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Case Description.
-        /// </summary>
-        public static string CaseDescription {
-            get {
-                return ResourceManager.GetString("CaseDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Case description is required.
-        /// </summary>
-        public static string CaseDescriptionRequired {
-            get {
-                return ResourceManager.GetString("CaseDescriptionRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Case Details.
-        /// </summary>
-        public static string CaseDetails {
-            get {
-                return ResourceManager.GetString("CaseDetails", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Case Details.
-        /// </summary>
-        public static string CaseDetails1 {
-            get {
-                return ResourceManager.GetString("CaseDetails1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Case list.
-        /// </summary>
-        public static string CaseList {
-            get {
-                return ResourceManager.GetString("CaseList", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Case Modified.
-        /// </summary>
-        public static string CaseModifiedDateT {
-            get {
-                return ResourceManager.GetString("CaseModifiedDateT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Case Name.
-        /// </summary>
-        public static string CaseName {
-            get {
-                return ResourceManager.GetString("CaseName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Case name is required.
-        /// </summary>
-        public static string CaseNameRequired {
-            get {
-                return ResourceManager.GetString("CaseNameRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Case Status.
-        /// </summary>
-        public static string CaseStatus {
-            get {
-                return ResourceManager.GetString("CaseStatus", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Create Case.
         /// </summary>
-        public static string CreateCase {
+        public static string Case_CreateCase_Button {
             get {
-                return ResourceManager.GetString("CreateCase", resourceCulture);
+                return ResourceManager.GetString("Case_CreateCase_Button", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Create Case:.
         /// </summary>
-        public static string CreateCaseTitle {
+        public static string Case_CreateCaseTitle_Header {
             get {
-                return ResourceManager.GetString("CreateCaseTitle", resourceCulture);
+                return ResourceManager.GetString("Case_CreateCaseTitle_Header", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Created By.
+        ///   Looks up a localized string similar to Case Created.
         /// </summary>
-        public static string CreatedBy {
+        public static string Case_CreatedDateT_Label {
             get {
-                return ResourceManager.GetString("CreatedBy", resourceCulture);
+                return ResourceManager.GetString("Case_CreatedDateT_Label", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to English.
+        ///   Looks up a localized string similar to Case Description.
         /// </summary>
-        public static string en {
+        public static string Case_Description_Label {
             get {
-                return ResourceManager.GetString("en", resourceCulture);
+                return ResourceManager.GetString("Case_Description_Label", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Enter case description.
         /// </summary>
-        public static string EnterCaseDescription {
+        public static string Case_Description_Placeholder {
             get {
-                return ResourceManager.GetString("EnterCaseDescription", resourceCulture);
+                return ResourceManager.GetString("Case_Description_Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Case description is required.
+        /// </summary>
+        public static string Case_Description_Validation {
+            get {
+                return ResourceManager.GetString("Case_Description_Validation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Case Details.
+        /// </summary>
+        public static string Case_Details_Label {
+            get {
+                return ResourceManager.GetString("Case_Details_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Case list.
+        /// </summary>
+        public static string Case_List_Header {
+            get {
+                return ResourceManager.GetString("Case_List_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Case Modified.
+        /// </summary>
+        public static string Case_ModifiedDateT_Label {
+            get {
+                return ResourceManager.GetString("Case_ModifiedDateT_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Case Name.
+        /// </summary>
+        public static string Case_Name_Label {
+            get {
+                return ResourceManager.GetString("Case_Name_Label", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Enter case name.
         /// </summary>
-        public static string EnterCaseName {
+        public static string Case_Name_Placeholder {
             get {
-                return ResourceManager.GetString("EnterCaseName", resourceCulture);
+                return ResourceManager.GetString("Case_Name_Placeholder", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter your first name.
+        ///   Looks up a localized string similar to Case name is required.
         /// </summary>
-        public static string EnterFirstName {
+        public static string Case_Name_Validation {
             get {
-                return ResourceManager.GetString("EnterFirstName", resourceCulture);
+                return ResourceManager.GetString("Case_Name_Validation", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter your last name.
+        ///   Looks up a localized string similar to Case Status.
         /// </summary>
-        public static string EnterLastName {
+        public static string Case_Status_Label {
             get {
-                return ResourceManager.GetString("EnterLastName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Spanish.
-        /// </summary>
-        public static string es {
-            get {
-                return ResourceManager.GetString("es", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to First Name.
-        /// </summary>
-        public static string FirstName {
-            get {
-                return ResourceManager.GetString("FirstName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to First name is required.
-        /// </summary>
-        public static string FirstNameRequired {
-            get {
-                return ResourceManager.GetString("FirstNameRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Learn about &lt;a href=&quot;https://docs.microsoft.com/aspnet/core&quot;&gt;building Web apps with ASP.NET Core&lt;/a&gt;..
-        /// </summary>
-        public static string HomeIndexWelcomeMessage {
-            get {
-                return ResourceManager.GetString("HomeIndexWelcomeMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Last Name.
-        /// </summary>
-        public static string LastName {
-            get {
-                return ResourceManager.GetString("LastName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Last name is required.
-        /// </summary>
-        public static string LastNameRequired {
-            get {
-                return ResourceManager.GetString("LastNameRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Modified By.
-        /// </summary>
-        public static string ModifiedBy {
-            get {
-                return ResourceManager.GetString("ModifiedBy", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to My Cases.
-        /// </summary>
-        public static string MyCases {
-            get {
-                return ResourceManager.GetString("MyCases", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Select language:.
-        /// </summary>
-        public static string SelectLanguage {
-            get {
-                return ResourceManager.GetString("SelectLanguage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Submit.
-        /// </summary>
-        public static string Submit {
-            get {
-                return ResourceManager.GetString("Submit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Welcome.
-        /// </summary>
-        public static string Welcome {
-            get {
-                return ResourceManager.GetString("Welcome", resourceCulture);
+                return ResourceManager.GetString("Case_Status_Label", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Welcome to the case list! Below is a list of ALL cases (Cases are randomized on load).
         /// </summary>
-        public static string WelcomeMessage {
+        public static string Case_WelcomeMessage_Header {
             get {
-                return ResourceManager.GetString("WelcomeMessage", resourceCulture);
+                return ResourceManager.GetString("Case_WelcomeMessage_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Back to List.
+        /// </summary>
+        public static string Common_BackToList_Button {
+            get {
+                return ResourceManager.GetString("Common_BackToList_Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string Common_Cancel_Button {
+            get {
+                return ResourceManager.GetString("Common_Cancel_Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Submit.
+        /// </summary>
+        public static string Common_Submit_Button {
+            get {
+                return ResourceManager.GetString("Common_Submit_Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Learn about &lt;a href=&quot;https://docs.microsoft.com/aspnet/core&quot;&gt;building Web apps with ASP.NET Core&lt;/a&gt;.
+        /// </summary>
+        public static string Home_WelcomeMessage_Paragraph {
+            get {
+                return ResourceManager.GetString("Home_WelcomeMessage_Paragraph", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome.
+        /// </summary>
+        public static string Home_WelcomeTitle_Header {
+            get {
+                return ResourceManager.GetString("Home_WelcomeTitle_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select language:.
+        /// </summary>
+        public static string Language_SelectLanguage_Label {
+            get {
+                return ResourceManager.GetString("Language_SelectLanguage_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to My Cases.
+        /// </summary>
+        public static string Layout_Cases_Link {
+            get {
+                return ResourceManager.GetString("Layout_Cases_Link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Created By.
+        /// </summary>
+        public static string User_CreatedBy_Label {
+            get {
+                return ResourceManager.GetString("User_CreatedBy_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter your first name.
+        /// </summary>
+        public static string User_EnterFirstName_Placeholder {
+            get {
+                return ResourceManager.GetString("User_EnterFirstName_Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter your last name.
+        /// </summary>
+        public static string User_EnterLastName_Placeholder {
+            get {
+                return ResourceManager.GetString("User_EnterLastName_Placeholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Name.
+        /// </summary>
+        public static string User_FirstName_Label {
+            get {
+                return ResourceManager.GetString("User_FirstName_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First name is required.
+        /// </summary>
+        public static string User_FirstName_Validation {
+            get {
+                return ResourceManager.GetString("User_FirstName_Validation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Name.
+        /// </summary>
+        public static string User_LastName_Label {
+            get {
+                return ResourceManager.GetString("User_LastName_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last name is required.
+        /// </summary>
+        public static string User_LastName_Validation {
+            get {
+                return ResourceManager.GetString("User_LastName_Validation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modified By.
+        /// </summary>
+        public static string User_ModifiedBy_Label {
+            get {
+                return ResourceManager.GetString("User_ModifiedBy_Label", resourceCulture);
             }
         }
     }

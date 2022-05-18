@@ -6,21 +6,21 @@ namespace CultureDemo.Models.Case
 {
     public class CaseBO : UserBO
     {
-        [Required(ErrorMessageResourceName = "CaseNameRequired", ErrorMessageResourceType = typeof(Resources))]
-        [Display(Name = "CaseName", ResourceType = typeof(Resources))]
+        [Required(ErrorMessageResourceName = "Case_Name_Validation", ErrorMessageResourceType = typeof(Resources))]
+        [Display(Name = "Case_Name_Label", ResourceType = typeof(Resources))]
         public string Case_Name { get; set; } = "";
 
-        [Required(ErrorMessageResourceName = "CaseDescriptionRequired", ErrorMessageResourceType = typeof(Resources))]
-        [Display(Name = "CaseDescription", ResourceType = typeof(Resources))]
+        [Required(ErrorMessageResourceName = "Case_Description_Validation", ErrorMessageResourceType = typeof(Resources))]
+        [Display(Name = "Case_Description_Label", ResourceType = typeof(Resources))]
         public string Case_Description { get; set; } = "";
 
-        [Display(Name = "CaseStatus", ResourceType = typeof(Resources))]
+        [Display(Name = "Case_Status_Label", ResourceType = typeof(Resources))]
         public string Case_Status { get; set; } = "";
 
-        [Display(Name = "CaseCreatedDateT", ResourceType = typeof(Resources))]
+        [Display(Name = "Case_CreatedDateT_Label", ResourceType = typeof(Resources))]
         public string Case_CreatedDateT { get; set; } = "";
 
-        [Display(Name = "CaseModifiedDateT", ResourceType = typeof(Resources))]
+        [Display(Name = "Case_ModifiedDateT_Label", ResourceType = typeof(Resources))]
         public string Case_ModifiedDateT { get; set; } = "";
     }
 }
