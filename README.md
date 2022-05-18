@@ -1,6 +1,6 @@
 # CultureDemo
 
-Localization with English and Spanish
+<h3>Localization with English and Spanish</h3>
 
 Easy to include other languages (Add resource files to relevant areas)
 
