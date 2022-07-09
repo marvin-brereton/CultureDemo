@@ -1,10 +1,10 @@
-﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+﻿@using CultureDemo.Languages
 
 @{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">@localizer["Welcome"]</h1>
-    <p>@localizer["WelcomeMessage"]</p>
+    <h1 class="display-4">@Resources.Home_WelcomeTitle_Header</h1>
+    @Html.Raw(@Resources.Home_WelcomeMessage_Paragraph)
 </div>

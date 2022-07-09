@@ -1,5 +1,5 @@
 ﻿@model CultureDemo.Models.Case.CaseBO
-@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@using CultureDemo.Languages
 
 @{
     ViewData["Title"] = "Case Details";
@@ -7,7 +7,7 @@
 
 <div class="container">
 
-    <h1>@localizer["CaseDetails"]</h1>
+    <h1>@Resources.Case_Details_Label</h1>
 
     <table class="table table-striped">
         <thead>
@@ -50,7 +50,7 @@
     </table>
 
     <div>
-        <a class="btn btn-primary" asp-action="Index">@localizer["Back to List"]</a>
+        <a class="btn btn-primary" asp-action="Index">@Resources.Common_BackToList_Button</a>
     </div>
 
 </div>

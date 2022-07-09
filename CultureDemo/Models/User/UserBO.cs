@@ -1,21 +1,23 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using CultureDemo.Languages;
+using System.ComponentModel.DataAnnotations;
 
 namespace CultureDemo.Models.User
 {
     public class UserBO
     {
-        [Required(ErrorMessage = "FirstNameRequired")]
-        [Display(Name = "FirstName")]
+        // DEMO: 2
+        [Required(ErrorMessageResourceName = "User_FirstName_Validation", ErrorMessageResourceType = typeof(Resources))]
+        [Display(Name = "User_FirstName_Label", ResourceType = typeof(Resources))]
         public string User_FirstName { get; set; } = "";
 
-        [Display(Name = "LastName")]
-        [Required(ErrorMessage = "LastNameRequired")]
+        [Display(Name = "User_LastName_Label", ResourceType = typeof(Resources))]
+        [Required(ErrorMessageResourceName = "User_LastName_Validation", ErrorMessageResourceType = typeof(Resources))]
         public string User_LastName { get; set; } = "";
 
-        [Display(Name = "CreatedBy")]
+        [Display(Name = "User_CreatedBy_Label", ResourceType = typeof(Resources))]
         public string User_CreatedBy { get; set; } = "";
 
-        [Display(Name = "ModifiedBy")]
+        [Display(Name = "User_ModifiedBy_Label", ResourceType = typeof(Resources))]
         public string User_ModifiedBy { get; set; } = "";
     }
 }

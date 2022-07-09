@@ -117,7 +117,120 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="WelcomeMessage" xml:space="preserve">
-    <value>¡Bienvenido a la lista de casos! A continuación se muestra una lista de TODOS los casos (los casos se aleatorizan en la carga)</value>
+  <data name="Case_CreateCaseTitle_Header" xml:space="preserve">
+    <value>Create Case:</value>
+    <comment>Case/Create.cshtml</comment>
+  </data>
+  <data name="Case_CreateCase_Button" xml:space="preserve">
+    <value>Create Case</value>
+    <comment>Case/Index.cshtml</comment>
+  </data>
+  <data name="Case_CreatedDateT_Label" xml:space="preserve">
+    <value>Case Created</value>
+    <comment>CaseBO</comment>
+  </data>
+  <data name="Case_Description_Label" xml:space="preserve">
+    <value>Case Description</value>
+    <comment>CaseBO</comment>
+  </data>
+  <data name="Case_Description_Placeholder" xml:space="preserve">
+    <value>Enter case description</value>
+    <comment>Case/Create.cshtml</comment>
+  </data>
+  <data name="Case_Description_Validation" xml:space="preserve">
+    <value>Case description is required</value>
+    <comment>CaseBO</comment>
+  </data>
+  <data name="Case_Details_Label" xml:space="preserve">
+    <value>Case Details</value>
+    <comment>Case/Details.cshtml</comment>
+  </data>
+  <data name="Case_List_Header" xml:space="preserve">
+    <value>Case list</value>
+    <comment>Case/Index.cshtml</comment>
+  </data>
+  <data name="Case_ModifiedDateT_Label" xml:space="preserve">
+    <value>Case Modified</value>
+    <comment>CaseBO</comment>
+  </data>
+  <data name="Case_Name_Label" xml:space="preserve">
+    <value>Case Name</value>
+    <comment>CaseBO</comment>
+  </data>
+  <data name="Case_Name_Placeholder" xml:space="preserve">
+    <value>Enter case name</value>
+    <comment>Case/Create.cshtml</comment>
+  </data>
+  <data name="Case_Name_Validation" xml:space="preserve">
+    <value>Case name is required</value>
+    <comment>CaseBO</comment>
+  </data>
+  <data name="Case_Status_Label" xml:space="preserve">
+    <value>Case Status</value>
+    <comment>CaseBO</comment>
+  </data>
+  <data name="Case_WelcomeMessage_Header" xml:space="preserve">
+    <value>Welcome to the case list! Below is a list of ALL cases (Cases are randomized on load)</value>
+    <comment>CaseController</comment>
+  </data>
+  <data name="Common_BackToList_Button" xml:space="preserve">
+    <value>Back to List</value>
+    <comment>Case/Details.cshtml</comment>
+  </data>
+  <data name="Common_Cancel_Button" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Case/Create.cshtml</comment>
+  </data>
+  <data name="Common_Submit_Button" xml:space="preserve">
+    <value>Submit</value>
+    <comment>Case/Create.cshtml</comment>
+  </data>
+  <data name="Home_WelcomeMessage_Paragraph" xml:space="preserve">
+    <value>Learn about &lt;a href="https://docs.microsoft.com/aspnet/core"&gt;building Web apps with ASP.NET Core&lt;/a&gt;</value>
+    <comment>Home/Index.cshtml</comment>
+  </data>
+  <data name="Home_WelcomeTitle_Header" xml:space="preserve">
+    <value>Welcome</value>
+    <comment>Home/Index.cshtml</comment>
+  </data>
+  <data name="Language_SelectLanguage_Label" xml:space="preserve">
+    <value>Select language:</value>
+    <comment>_SelectLanguages.cshtml</comment>
+  </data>
+  <data name="Layout_Cases_Link" xml:space="preserve">
+    <value>My Cases</value>
+    <comment>_Layout.cshtml</comment>
+  </data>
+  <data name="User_CreatedBy_Label" xml:space="preserve">
+    <value>Created By</value>
+    <comment>CaseBO</comment>
+  </data>
+  <data name="User_EnterFirstName_Placeholder" xml:space="preserve">
+    <value>Enter your first name</value>
+    <comment>Case/Create.cshtml</comment>
+  </data>
+  <data name="User_EnterLastName_Placeholder" xml:space="preserve">
+    <value>Enter your last name</value>
+    <comment>Case/Create.cshtml</comment>
+  </data>
+  <data name="User_FirstName_Label" xml:space="preserve">
+    <value>First Name</value>
+    <comment>CaseBO</comment>
+  </data>
+  <data name="User_FirstName_Validation" xml:space="preserve">
+    <value>First name is required</value>
+    <comment>CaseBO</comment>
+  </data>
+  <data name="User_LastName_Label" xml:space="preserve">
+    <value>Last Name</value>
+    <comment>CaseBO</comment>
+  </data>
+  <data name="User_LastName_Validation" xml:space="preserve">
+    <value>Last name is required</value>
+    <comment>CaseBO</comment>
+  </data>
+  <data name="User_ModifiedBy_Label" xml:space="preserve">
+    <value>Modified By</value>
+    <comment>CaseBO</comment>
   </data>
 </root>

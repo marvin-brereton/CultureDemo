@@ -1,0 +1,43 @@
+﻿@model CultureDemo.Models.Case.CaseBO
+@using CultureDemo.Languages
+
+@{
+    ViewData["Title"] = "Create Case";
+}
+
+<div class="container">
+    <h1>@Resources.Case_CreateCaseTitle_Header</h1>
+    @using (Html.BeginForm("Create", "Case", FormMethod.Post))
+    {
+        <div class="row mb-3">
+            <div class="col">
+                @Html.LabelFor(e => e.Case_Name)
+                @Html.TextBoxFor(e => e.Case_Name, null, new { @placeholder = $"{@Resources.Case_Name_Placeholder}", @class = "form-control" })
+                @Html.ValidationMessageFor(e => e.Case_Name)
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                @Html.LabelFor(e => e.Case_Description)
+                @Html.TextAreaFor(e => e.Case_Description, 5, 10, new { @placeholder = $"{@Resources.Case_Description_Placeholder}", @class = "form-control" })
+                @Html.ValidationMessageFor(e => e.Case_Description)
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-6">
+                @Html.LabelFor(e => e.User_FirstName)
+                @Html.TextBoxFor(e => e.User_FirstName, null, new { @placeholder = $"{@Resources.User_EnterFirstName_Placeholder}", @class = "form-control" })
+                @Html.ValidationMessageFor(e => e.User_FirstName)
+            </div>
+            <div class="col-6">
+                @Html.LabelFor(e => e.User_LastName)
+                @Html.TextBoxFor(e => e.User_LastName, null, new { @placeholder = $"{@Resources.User_EnterLastName_Placeholder}", @class = "form-control" })
+                @Html.ValidationMessageFor(e => e.User_LastName)
+            </div>
+        </div>
+        @*DEMO: 3*@
+        <input type="submit" value="@Resources.Common_Submit_Button" class="btn btn-primary mt-2">
+        @Html.ActionLink(@Resources.Common_Cancel_Button, "Index", "Case", null, new { @class="btn btn-danger mt-2" })
+    }
+</div>
+
